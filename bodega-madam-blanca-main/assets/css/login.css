@@ -1,0 +1,474 @@
+:root {
+	--primary-color: #c7a17a; /* Color principal del index */
+	--secondary-color: #F5D6BA; /* Melocotón claro */
+	--background-color: #f9f5f0; /* Color de fondo del index */
+	--dark-color: #151515; /* Color oscuro del index */
+	--error-color: #ff4d4d;
+	--white-color: #ffffff;
+	--success-color: #4CAF50;
+	--warning-color: #ff9800;
+	--info-color: #2196F3;
+	--text-color: #333333;
+	--border-color: #e0e0e0;
+	--hover-color: #b38d6a; /* Versión más oscura del color principal */
+}
+
+.container-pincipal{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding: 20px;
+    background: var(--background-color);
+}
+
+.container2{
+    width: 100%;
+    max-width: 450px;
+    min-height: 650px;
+    background: var(--white-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.container2 .forms{
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.container2 .form{
+    width: 50%;
+    padding: 40px;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+}
+.container2.active2 .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+.container2 .signup{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.container2.active2 .signup{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.container2.active2 .forms{
+    height: auto;
+}
+.container2 .form .title{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    background: var(--primary-color);
+    border-radius: 25px;
+}
+.form .input-field{
+    position: relative;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+.input-field input, 
+.input-field select {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    padding: 0 15px 0 45px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+}
+.input-field input:focus, 
+.input-field select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(199, 161, 122, 0.1);
+}
+.input-field i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+}
+.form .text{
+    color: var(--text-color);
+    font-size: 15px;
+}
+.form a.text{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.form a.text:hover{
+    color: var(--hover-color);
+    text-decoration: none;
+}
+.form .button{
+    margin-top: 40px;
+}
+.form .button input{
+    width: 100%;
+    height: 55px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button input:hover{
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(199, 161, 122, 0.2);
+}
+
+.form .login-signup{
+    margin-top: 35px;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #fff5f5;
+    border-left: 4px solid var(--error-color);
+    color: var(--error-color);
+    padding: 12px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-message::before {
+    content: '⚠️';
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.input-field.error input,
+.input-field.error select {
+    border-bottom-color: var(--error-color);
+    animation: shake 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .container2 {
+        max-width: 95%;
+        min-height: 600px;
+    }
+
+    .container2 .forms {
+        height: auto;
+    }
+
+    .form .input-field input,
+    .form .input-field select,
+    .form .button input {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .input-field i {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-pincipal {
+        padding: 10px;
+    }
+
+    .container2 {
+        min-height: 550px;
+    }
+
+    .container2 .form {
+        padding: 25px;
+    }
+
+    .form .title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .form .input-field input,
+    .form .input-field select,
+    .form .button input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .input-field i {
+        font-size: 16px;
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos avanzados para validaciones */
+:root {
+    --success-color: #4CAF50;
+    --error-color: #ff4d4d;
+    --warning-color: #ff9800;
+    --info-color: #2196F3;
+}
+
+/* Estilo base para campos de entrada */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Estados de validación */
+.input-field.success input,
+.input-field.success select {
+    border-bottom-color: var(--success-color);
+}
+
+.input-field.error input,
+.input-field.error select {
+    border-bottom-color: var(--error-color);
+    animation: shake 0.4s ease-in-out;
+}
+
+.input-field.warning input,
+.input-field.warning select {
+    border-bottom-color: var(--warning-color);
+}
+
+/* Iconos de validación */
+.input-field .validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.input-field.success .validation-icon.success-icon,
+.input-field.error .validation-icon.error-icon,
+.input-field.warning .validation-icon.warning-icon {
+    opacity: 1;
+}
+
+.validation-icon.success-icon {
+    color: var(--success-color);
+}
+
+.validation-icon.error-icon {
+    color: var(--error-color);
+}
+
+.validation-icon.warning-icon {
+    color: var(--warning-color);
+}
+
+/* Mensajes de validación */
+.validation-message {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.input-field.success .validation-message.success,
+.input-field.error .validation-message.error,
+.input-field.warning .validation-message.warning {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.validation-message.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--success-color);
+}
+
+.validation-message.error {
+    background-color: rgba(255, 77, 77, 0.1);
+    color: var(--error-color);
+}
+
+.validation-message.warning {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: var(--warning-color);
+}
+
+/* Animaciones de validación */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para iconos de validación */
+.validation-icon {
+    font-size: 1.2em;
+}
+
+.validation-icon.success-icon::before {
+    content: '✓';
+}
+
+.validation-icon.error-icon::before {
+    content: '✗';
+}
+
+.validation-icon.warning-icon::before {
+    content: '⚠️';
+}
+
+/* Estilos para modal de error */
+.error-modal {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #fff5f5;
+    border-left: 5px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    animation: slideInLeft 0.5s ease-out, fadeOut 0.5s ease-in 4s forwards;
+    display: flex;
+    align-items: center;
+}
+
+.error-modal .error-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.error-modal .close-btn {
+    margin-left: 15px;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+/* Estilos para mensajes de error en el registro */
+.error-registro {
+    background-color: rgba(255, 77, 77, 0.1); /* Fondo suave */
+    color: #000000; /* Color del texto */
+    border: 1px solid #000000; /* Borde rojo */
+    padding: 10px 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9em; /* Tamaño de fuente */
+    display: flex; /* Flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    animation: fadeIn 0.3s ease-in-out; /* Animación de aparición */
+}
+
+/* Icono de advertencia */
+.error-registro::before {
+    content: '⚠️'; /* Emoji de advertencia */
+    margin-right: 8px; /* Espaciado a la derecha */
+    font-size: 1.2em; /* Tamaño del icono */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

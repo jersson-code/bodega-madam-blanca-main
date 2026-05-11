@@ -1,0 +1,47 @@
+objetivo general por hacer:
+
+1. organizar y revisar todo el escrito de la pagina es decir como estan escritas las palabras 
+
+2. revisar como organizo el tratado de permisos como le doy a las pesonas permisos para entrar en sierta seccion del administraeor es decir 
+que este usuario solo puede ver los productos o pedidos
+
+3. crearle data las personas reguistardas, cuantas compras se desarrollan en el dia cuanros prollectos hay 
+
+
+seccion de usuarios:
+
+1. solo se quedara un boton de usuarios es decir ese boton que se despliega se va y solo quedara un boton de usuarios
+1.1 en esto solo se mostara los usuarios con sus respetivas acciones de desabilitar, editar y permisos
+
+2. no se eliminaran los usuarios se desabilitaran para que no se pueda ingresar con esas credenciales 
+
+
+seccion de pedidos:
+
+1. hacer un sistema de cartera que nos muestre todo el proceso que se desarrolla en el proyecto como tal del jefe de obra 
+2. no 
+
+seccion de administracion:
+
+1 organizar la seccion de productos
+
+2 solo se quedara un boton de producto es decir ese boton que se despliega se va y solo quedara un boton de producto
+
+3 se mostraran todos los productos 
+
+4 los productos no se eliminaran sino que los desabilitaremos de la pagina principal 
+
+5 organizar la seccion de pedidos que cuando busquen un pedido sea posible buscarlos por dias es decir que se filtren 
+
+6 en la parte superior habran dos botones que diga nuevo producto y agreagr al proyecto 
+
+
+
+seccion de producto (asig_producto_proyecto.php):
+
+1. poder agregar varior productos ya que se agregan individual mente si es posible colocar un check y un buscador para que se puedan buscar
+los productos que se necesitan y seleccionarlos y poneles la cantidad 
+
+2. que se muestre cuanto esta por pagar 
+
+3. que se muestre una alerta confirmandoo el pago 
