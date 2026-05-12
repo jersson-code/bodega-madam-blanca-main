@@ -1,0 +1,104 @@
+/* Estilos para el formulario de contacto */
+#contactos {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+#contactos h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#contactos h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto;
+}
+
+#contactos form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#contactos fieldset {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+#contactos legend {
+    background: #3498db;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.2rem !important;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+#contactos .form-label {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#contactos .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+#contactos .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+#contactos textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contactos .form-check-input {
+    margin-right: 0.5rem;
+}
+
+#contactos .form-check-input:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+#contactos .btn-primary {
+    background: #3498db;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#contactos .btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #contactos form {
+        padding: 1.5rem;
+    }
+    
+    #contactos fieldset {
+        padding: 1rem;
+    }
+} 
