@@ -1,0 +1,76 @@
+Finalidad del Proyecto: Sistema de Administración para la Bodega "Doña Blanca"
+
+El propósito de este proyecto es desarrollar un sitio web para la bodega "Doña Blanca", el cual permita gestionar tanto las ventas a usuarios comunes como a clientes especiales.
+
+Funcionalidades Principales:
+
+    1. Gestión de Clientes Especiales (Reservas de Stock):
+
+        El sistema permitirá registrar clientes especiales, como constructoras, que necesiten reservar una parte del stock sin retirarlo inmediatamente.
+
+        A través del panel de administración, se registrará el nombre de la constructora y el jefe encargado de gestionar los bienes destinados a dicha empresa.
+
+        Se generará un código único para el jefe de obra, que deberá registrarse en el sistema. Al iniciar sesión, solo podrá ver los productos asignados al proyecto de su constructora.
+
+        Desde esta sección, el jefe de obra podrá seleccionar la cantidad de productos que desea solicitar para su proyecto.
+
+    2. Compras para Usuarios Comunes:
+
+        Los usuarios sin rol de jefe de obra también podrán comprar productos directamente del stock principal de la bodega.
+        Estas compras no afectarán el stock reservado para proyectos gestionados por los jefes de obra.
+
+    3. Gestión de Pedidos:
+
+        Los pedidos realizados en el sitio web serán enviados al panel de administración, donde el administrador podrá:
+
+            Aprobar: Confirmar el pedido, descontando los productos del stock correspondiente.
+
+            Rechazar: Cancelar el pedido, devolviendo los productos al stock original.
+
+            Ver detalles: Revisar la información completa del pedido.
+
+        En caso de rechazo, se notificará al usuario si su pedido fue rechazado o aprobado.
+
+    4. Gestión de Usuarios:
+
+        Perfiles con roles específicos
+
+            Administrador: Control total sobre el sistema.
+
+            Vendedores: Acceso limitado para registrar ventas
+            .
+            Clientes: Panel personalizado para ver su historial de pedidos y productos reservados.
+
+        Registro y autenticación con seguridad avanzada (contraseñas cifradas, doble autenticación).
+
+
+
+Este sistema tiene como objetivo mejorar la administración de la bodega, optimizando la gestión de inventarios y facilitando la experiencia de los usuarios.
+
+
+
+obsevaciones de faseta de desarrollo:
+
+
+1. tienes que estar conectado a internet para que los iconos del navbar te funcionen correctamente 
+
+2. La base de datos esta en la carpeta bd
+
+3. cuenta con una api local la cual te dira las mejores constructoras de colombia si quieres agregar alguna tendras que 
+hacerlo desde el localhost(phpMyadmin)
+
+4. esta  funcional hasta el momento de pagar ya que hace falta una pasarela de pago para realizar los 
+pagos de los articulos que estan en el carrito
+
+5. el admin esta toatalmente funcional, si subes un producto desde el admin se cargara en el aprertado de productos 
+donde puedes ver las imagenes del los pruductos y los prodras seleccionar solo si ya estas reguistrado 
+
+Para ingresar al admin el correo es: admin@gmail.com
+Para ingresar al admin la contraseña es: admin
+
+en el admin se puede crear roles, subir productos, mirar pedidos, actulizar y eliminar usuarios, crear categorias
+editar los rolees de los usuarios crear proyectos 
+
+al relizar un pedido desde el sitio wed se pede viuslizar este pedido en el admin donde podemos rchazarlo, 
+aceptarlo o mirar los detalles del pedido. Al rechazarlo se actualiza el estock es decir que vuelven los 
+productos selecionados al estock que pertenecenal, confirmar el pedido pasa a un estado de confirmancion   
